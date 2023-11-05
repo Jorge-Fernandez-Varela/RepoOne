@@ -12,7 +12,7 @@ scanf("%f", &peso);
 
 imc = peso / (altura*altura);
 const char *interpretacion  = (18.5 > imc) ? "Bajo peso" : (25 > imc) ? "Normal" :  (30 > imc) ? "Sobrepeso" :  "Obesidad";
-float descuento = (18.5 > imc) ? 0.05: (30 > imc) ? 0.1 : 0.15;
+float descuento = (18.5 > imc) ? 0.05: (25 > imc) ? 0 : (30 > imc) ? 0.1 : 0.15;
 
 printf("Su IMC actual es: %.2f, y la interpretación es %s\n", imc, interpretacion);
 printf("Como incentivo, obtiene un descuento del %.0f%% en la tarifa de memebresia del gimnasio.\n", descuento*100);
